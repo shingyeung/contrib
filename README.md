@@ -50,17 +50,15 @@ On Windows:
 Download and install Win32DiskImager
 https://sourceforge.net/projects/win32diskimager/
 
-On Mac:
+On Mac: [TODO]
 
-TODO
+1. Burning the MicroSD with OS image, and powering up your rpi3
 
-* Burning the OS, and powering up your rpi3
+[Add pics]
 
-[Add pics on how to do - like here ]
+2. Insert into the rpi3 SD slot, connect the Ethernet cable from a free port on your router to the rpi3's Ethernet jack, and plug in power to the rpi3; watch the lights go on and blink while it boots the OS.
 
-* Insert into the rpi3 SD slot, connect the Ethernet cable from your router port to the rpi3, and plug in power to the rpi3; watch the lights go on and blink
-
-* After a few minutes, from your desktop/laptop browser log into to your router admin screen and locate your rpi3's IP address, say 1.2.3.4 for remainder of this how-to
+3. After a few minutes, from your desktop/laptop browser log into to your router admin screen and locate your rpi3's IP address, say 1.2.3.4 for remainder of this how-to
 
 [add screenshot for Asus router admin screen]
 
@@ -88,13 +86,11 @@ Supply a password for root.  It will ask for it a 2nd time to confirm.
 ## Prepare tooling to install Solid
 
 Switch over to root account:
-
 ```
 su -
 ```
 
 And run all of these commands one at a time.  Look for errors and do not proceed to next step if any [TODO: add common errors and fixes]
-
 ```
 apt-get update -y && apt-get upgrade -y
 
@@ -142,12 +138,8 @@ If all goes well, you will see:
    version of this certificate in the future, simply run certbot
    again. To non-interactively renew *all* of your certificates, run
    "certbot renew"
- - If you like Certbot, please consider supporting our work by:
-
-   Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
-   Donating to EFF:                    https://eff.org/donate-le
+   ...
 ```
-
 Your certificate files are found here:
 ```
 root@ubuntu:~# find /etc/letsencrypt/live
@@ -169,7 +161,8 @@ You will be supplying privkey.pem and fullchain.pem at Solid initialization, bel
 
 As root:
 
-```npm install -g solid-server@4.4.2
+```
+npm install -g solid-server@4.4.2
 ```
 This takes a while...
 
@@ -181,10 +174,10 @@ root@ubuntu:~# npm list -g solid-server
 /usr/lib
 └── solid-server@4.4.2
 ```
-
 If you need to start over, uninstall with:
-```npm uninstall -g solid-server```
-
+```
+npm uninstall -g solid-server
+```
 ## Configure and Run Solid
 
 As root, run all commands below
