@@ -91,6 +91,7 @@ su -
 ```
 
 And run all of these commands one at a time.  Look for errors and do not proceed to next step if any [TODO: add common errors and fixes]
+Some of these take a while to complete so be patient...
 ```
 apt-get update -y && apt-get upgrade -y
 
@@ -160,11 +161,9 @@ You will be supplying privkey.pem and fullchain.pem at Solid initialization, bel
 ## Install Solid with npm
 
 As root:
-
 ```
 npm install -g solid-server@4.4.2
 ```
-This takes a while...
 
 **Note: Latest version NSS 5.0.1 (4/2019) appears to peg CPU on an rpi3 after a trustedApp is added; 4.4.2 does not.  Similar delay/sluggishness is also observed on a NSS5.0.1/Unbuntu 16.0.4 LTS server on a VM. It is not as exaggerated here probably due to higher CPU and memory specs.**
 
