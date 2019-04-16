@@ -118,7 +118,7 @@ apt-get install -y npm
 
 **Getting your own domain name**
 
-This is the recommended option for on-going long term hosting of your own POD.  While there is recurring annual cost, it will give you peace of mind and constant a domain name for your communications to the family/friends/world going forward.
+This is the recommended option for on-going long term hosting of your own POD.  While there is recurring annual cost, it will give you peace of mind and a fixed domain name for your communications to the family/friends/world going forward.
 
 Free alternatives to getting a domain name include:
 * Configuring your router to enable a Dynamic DNS name:  Most mainstream router manufacturers, e.g. Asus, provides a single name to be registered through the manufacturer's DNS server, e.g. yourdomainname.asuscomm.com (for Asus).  Check your router manual on how to configure this.
