@@ -55,11 +55,12 @@ TODO
 * Insert into the rpi3 SD slot and plugin power
 
 * After a few mintues, from your desktop/laptop browser log into to your router admin screen and locate your rpi3's IP address, say 1.2.3.4 for remainder of this how-to
-   [add screenshot for Asus router admin screen]
+
+[add screenshot for Asus router admin screen]
 
 ## Log into your rpi3
 
-* Download putty for ssh
+* Download ssh program:  putty https://putty.org/
 
 * Log in to your rpi3 with ssh
 ```ssh ubuntu@1.2.3.4```
