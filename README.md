@@ -227,8 +227,8 @@ config created on /var/www/yourdomain.com/config.json
 ```
 
 Now, run Solid:
-
-```cd /var/www/yourdomain.com
+```
+cd /var/www/yourdomain.com
 
 nohup solid start &
 ```
@@ -247,7 +247,8 @@ If you don't see any errors, your POD is ready to be accessed from a browser.
 
 From a browser load:
 
-```https://yourdomain.com
+```
+https://yourdomain.com
 ```
 
 * Click 'Register' and add your single user
@@ -258,12 +259,31 @@ From a browser load:
 
 ## Backing up your data
 
-[TODO]
+The easiest way is to clone your now-operational MicoSD image.
 
-## DR
+1. Power down the rpi3 (need to do this as root)
+```
+su -
 
-[TODO]
+shutdown -h now
+```
+After watching the green led blink 10 times in sequences, unplug the power adpater.  Remove the MicroSD card from the rpi3
 
-## HA
+2. Plug the MicroSD card into your desktop/laptop card reader.  Using Win32DiskImager, create a backup image from it.  You now have a backup of your data and also an image for disaster recovery in the scenario where your rpi3 suffers a hardware failure.
 
-[TODO]
+3. Replace the MicroSD and power up the rpi3, log in, switch over to root and start your server again
+
+After log in:
+```
+su -
+cd /var/www/yourdomain.com
+nohup solid start&
+```
+
+Now you can log out
+```
+exit
+exit
+```
+
+Alternative approaches for backing up your data that is not as high-touch as above is possible but too advanced for this how-to, e.g. mounting the /var/www/yourdomain.com/data directory to a redundant network drive, or setting up dirsync.
