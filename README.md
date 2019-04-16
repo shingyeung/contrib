@@ -302,4 +302,4 @@ exit
 exit
 ```
 
-Alternative approaches for backing up your data that is not as high-touch as above is possible but too advanced for this how-to, e.g. mounting the /var/www/yourdomain.com/data directory to a redundant network drive, setting up dirsync, or a crontab that ftps a tar of the data directory elsewhere.
+Alternative approaches for backing up your data that are not as high-touch as above after implementation are possible but too advanced for this how-to, e.g. mounting the /var/www/yourdomain.com/data directory to a redundant network drive, setting up dirsync, or a crontab that ftps a tar of the data directory elsewhere.
