@@ -46,7 +46,7 @@ Select "Ubuntu Classic Server 16.04 Raspberry Pi 3 (216MB)" from https://ubuntu-
 
 Note: If you prefer you may want to use ubuntu-18 img instead and will likely work also but these steps have not been tested with ubuntu 18.
 
-Use 7zip to extract the .img
+Use [7zip](https://sourceforge.net/projects/sevenzip/) to extract the .img
 
 You now need to burn this .img onto the SD card from your laptop or desktop:
 
@@ -98,6 +98,7 @@ Switch over to root acount:
 And run all of these commands one at a time.  Look for errors and do not proceed to next step if any [TODO: add common errors and fixes]
 
 This one take a while...
+
 ```
 apt-get update -y && apt-get upgrade -y
 
@@ -109,8 +110,15 @@ apt-get update -y
 
 apt-get install -y certbot
 
+apt-get update -y
+
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+
+apt-get install -y nodejs
 ```
+
 This one takes a while too...
+
 ```apt-get install -y npm
 ```
 
