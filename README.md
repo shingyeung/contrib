@@ -108,7 +108,7 @@ And run all of these commands one at a time.  Look for errors and do not proceed
 
 [TODO]
 
-Disclaimer:  Security risks and considerations for opening up your home network to the internet at port 443.  Do so only if you know of the potential risks or have experience with protecting a web server, which is what NSS is.
+Disclaimer:  Security risks and considerations for opening up your home network to the internet at port 443.  Do so only if you know of the potential risks or have experience with protecting your rpi3 NSS server.
 
 ## Get your certificate from Letsencrypt
 
