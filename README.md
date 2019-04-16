@@ -179,7 +179,7 @@ As root:
 npm install -g solid-server@4.4.2
 ```
 
-**Note: Latest version NSS 5.0.1 (4/2019) appears to peg CPU on an rpi3 after a trustedApp is added; 4.4.2 does not.  Similar delay/sluggishness is also observed on a NSS5.0.1/Unbuntu 16.0.4 LTS server on a VM. It is not as exaggerated here probably due to higher CPU and memory specs.**
+**Note: Latest version NSS 5.0.1 (4/2019) appears to peg CPU on an rpi3 after a trustedApp is added; 4.4.2 does not.  Similar delay/sluggishness is also observed on a NSS5.0.1/Unbuntu 16.0.4 LTS server on a VM. It is not as exaggerated there probably due to higher CPU and memory specs.**
 
 Check which version is installed:
 ```
