@@ -194,33 +194,64 @@ If you need to start over, uninstall with:
 
 As root, run all commands below
 
-```cd /var/www```
+Create directory structure in prep for Solid init:
 
-```mkdir -p yourdomain.com/data```
+```
+mkdir -p /var/www/yourdomain.com
 
-```mkdir -p yourdomain.com/config```
+cd /var/www/yourdomain.com
 
-```mkdir -p yourdomain.com/.db```
+mkdir ./data
 
-```cd /var/www/yourdomain.com```
+mkdir ./config
 
-[Add screenshot of dir structure resulted]
+mkdir ./.db
+```
 
 Now, initialize solid with this one-time (per installation) command:
 
-```solid init```
+```
+cd /var/www/yourdomain.com
 
-[refer to remainder from NSS installation steps https://solid.inrupt.com/docs/installing-running-nss]
+solid init
+```
 
-Run Solid:
+Answer all the questions per [NSS installation steps](https://solid.inrupt.com/docs/installing-running-nss)
 
-```cd /var/www/yourdomain.com```
+Should look something like:
 
-```nohup solid start```
+```
+root@ubuntu:/var/www/yourdomain.com# solid init
+? Path to the folder you want to serve. Default is /var/www/yourdomain.com/data
+? SSL port to run on. Default is 443
+? Solid server uri (with protocol, hostname and port) https://yourdomain.com
+? Enable WebID authentication Yes
+? Serve Solid on URL path /
+? Path to the config directory (for example: /etc/solid-server) /var/www/yourdomain.com/config
+? Path to the config file (for example: ./config.json) /var/www/yourdomain.com/config.json
+? Path to the server metadata db directory (for users/apps etc) /var/www/yourdomain.com/.db
+? Path to the SSL private key in PEM format /etc/letsencrypt/live/yourdomain.com/privkey.pem
+? Path to the SSL certificate key in PEM format /etc/letsencrypt/live/yourdomain.com/fullchain.pem
+? Enable multi-user mode No
+? Do you want to set up an email service? No
+? A name for your server (not required, but will be presented on your server's frontpage) yourdomain.com
+? A description of your server (not required)
+? A logo that represents you, your brand, or your server (not required)
+config created on /var/www/yourdomain.com/config.json
+```
 
-```tail -f nohup.out```
+Now, run Solid:
 
-[Add screenshot of successful startup]
+```cd /var/www/yourdomain.com
+
+nohup solid start
+```
+
+If you want to see its logs:
+
+```
+tail -f nohup.out
+```  (ctrl-C to exit)
 
 If you don't see any errors, your POD is ready to be accessed from a browser.
 
