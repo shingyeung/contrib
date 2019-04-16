@@ -14,7 +14,7 @@ Assumptions/Dependencies:
 
 You want to host your own POD because
 * You want to own your data physically
-* You want an ability to host a POD for your friends and family (this requires wildcard certificated setup, see TBD) for same reason.
+* (Not covered by this how-to) You want an ability to host a POD for your friends and family (this requires wildcard certificated setup, see TBD) for same reason.
 
 ## Get the hardware
 
