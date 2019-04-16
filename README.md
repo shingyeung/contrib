@@ -1,4 +1,4 @@
-# Self hosting a Solid POD on a Raspberry Pi 3 using node-solid-server (NSS)
+# Self-hosting a Solid POD on a Raspberry Pi 3 using node-solid-server (NSS)
 
 The steps below have been tested to work on the stated hardware and software combination.
 
