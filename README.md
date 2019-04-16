@@ -72,7 +72,7 @@ TODO
 
 * Download ssh program:  putty https://putty.org/
 
-* Log in to your rpi3 with ssh
+* Log in to your rpi3 with putty, or from a command line with ssh program:
 
 ```ssh ubuntu@1.2.3.4```
 
