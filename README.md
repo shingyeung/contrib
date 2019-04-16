@@ -183,7 +183,7 @@ From a browser load:
 ```https://yourdomain.com```
 
 * Click 'Register' and add your single user
-* Now, log in and select from the choices listed, click "yourdomain.com"
+* Now, log in by selecting from the choices listed: "yourdomain.com" as the authorization provider
 * Supply the user/pass created above and you should see this
 
 [add screenshot]
