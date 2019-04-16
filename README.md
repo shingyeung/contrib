@@ -97,17 +97,21 @@ Switch over to root acount:
 
 And run all of these commands one at a time.  Look for errors and do not proceed to next step if any [TODO: add common errors and fixes]
 
-```apt-get update -y && apt-get upgrade -y```
+```
+This one take a while...
+apt-get update -y && apt-get upgrade -y
 
-```apt-get install software-properties-common```
+apt-get install -y software-properties-common
 
-```add-apt-repository ppa:certbot/certbot```
+add-apt-repository -y ppa:certbot/certbot
 
-```apt-get update```
+apt-get update -y
 
-```apt-get install certbot```
+apt-get install -y certbot
 
-```apt-get install npm```
+This one takes a while too ...
+apt-get install -y npm
+```
 
 ## Domain name or DDNS, and Port Forwarding
 
@@ -121,11 +125,66 @@ Note: You need to configure your home router to forward port 80 while you run th
 
 [TODO - also refer to NSS installation page at inrupt]
 
-```ls /etc/letsencrypt/live/yourdomain.com```
+```
+root@ubuntu:~# certbot certonly --authenticator standalone -d yourdomain.com
+Saving debug log to /var/log/letsencrypt/letsencrypt.log
+Plugins selected: Authenticator standalone, Installer None
+Enter email address (used for urgent renewal and security notices) (Enter 'c' to
+cancel): yourname@youremail.com
+Starting new HTTPS connection (1): acme-v02.api.letsencrypt.org
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Please read the Terms of Service at
+https://letsencrypt.org/documents/LE-SA-v1.2-November-15-2017.pdf. You must
+agree in order to register with the ACME server at
+https://acme-v02.api.letsencrypt.org/directory
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+(A)gree/(C)ancel: A
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Would you be willing to share your email address with the Electronic Frontier
+Foundation, a founding partner of the Let's Encrypt project and the non-profit
+organization that develops Certbot? We'd like to send you email about our work
+encrypting the web, EFF news, campaigns, and ways to support digital freedom.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+(Y)es/(N)o: N
+Obtaining a new certificate
+Performing the following challenges:
+http-01 challenge for yourdomain.com
+Waiting for verification...
+Cleaning up challenges
+Resetting dropped connection: acme-v02.api.letsencrypt.org
+
+IMPORTANT NOTES:
+ - Congratulations! Your certificate and chain have been saved at:
+   /etc/letsencrypt/live/yourdomain.com/fullchain.pem
+   Your key file has been saved at:
+   /etc/letsencrypt/live/yourdomain.com/privkey.pem
+   Your cert will expire on 2019-07-15. To obtain a new or tweaked
+   version of this certificate in the future, simply run certbot
+   again. To non-interactively renew *all* of your certificates, run
+   "certbot renew"
+ - If you like Certbot, please consider supporting our work by:
+
+   Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
+   Donating to EFF:                    https://eff.org/donate-le
+```
 
 You should see your certificate:  **privkey.pem, cert.pem, fullchain.pem, chain.pem**
+```
+root@ubuntu:~# find /etc/letsencrypt/live
+/etc/letsencrypt/live
+/etc/letsencrypt/live/README
+/etc/letsencrypt/live/yourdomain.com
+/etc/letsencrypt/live/yourdomain.com/cert.pem
+/etc/letsencrypt/live/yourdomain.com/chain.pem
+/etc/letsencrypt/live/yourdomain.com/README
+/etc/letsencrypt/live/yourdomain.com/privkey.pem
+/etc/letsencrypt/live/yourdomain.com/fullchain.pem
 
-Now, goto your router and remove the port 80 forward configuration.
+```
+
+**Now, don't forget to goto your router and remove the port 80 forward configuration.**
 
 ## Install Solid with npm
 
