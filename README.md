@@ -23,11 +23,11 @@ Assumptions:
 * One free port on your home router
 * Enclosure for rpi3 (Optional)
 
+They can be purchased at the usual online stores or from craigslist.
+
 You will also need the ability to burn an OS image onto a microSD card from a laptop or desktop computer with a card reader/writer.
 
 [Add picture of setup]
-
-They can be purchased at the usual online stores or from craigslist.
 
 ## Install Linux
 
