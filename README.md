@@ -1,4 +1,8 @@
-# WIP to be completed
+# WIP, Incompleted, DO NOT USE
+
+[Add Disclaimers, exclusion clauses and risk warnings]
+
+[Add copyright]
 
 # Self hosting a Solid POD on a Raspberry Pi 3 using node-solid-server (NSS)
 
