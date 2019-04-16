@@ -44,20 +44,19 @@ Note: If you prefer you may want to use Ubuntu-18 img instead and will likely wo
 
 Use [7zip](https://sourceforge.net/projects/sevenzip/) to extract the .img
 
-You now need to burn this .img onto the SD card from your laptop or desktop:
+*Burning the MicroSD with OS image, and powering up your rpi3*
+
+You now need to burn this .img onto the SD card from your laptop or desktop.
 
 _On Windows:_ Download and install Win32DiskImager
 https://sourceforge.net/projects/win32diskimager/
+[Add pics]
 
 _On Mac:_ [TODO]
 
-1. Burning the MicroSD with OS image, and powering up your rpi3
+1. Insert into the rpi3 SD slot, connect the Ethernet cable from a free port on your router to the rpi3's Ethernet jack, and plug in power to the rpi3; watch the lights go on and blink while it boots the OS.
 
-[Add pics]
-
-2. Insert into the rpi3 SD slot, connect the Ethernet cable from a free port on your router to the rpi3's Ethernet jack, and plug in power to the rpi3; watch the lights go on and blink while it boots the OS.
-
-3. After a few minutes, from your desktop/laptop browser log into to your router admin screen and locate your rpi3's IP address, say 1.2.3.4 for remainder of this how-to
+2. After a few minutes, from your desktop/laptop browser log into to your router admin screen and locate your rpi3's IP address, say 1.2.3.4 for remainder of this how-to
 
 [add screenshot for Asus router admin screen]
 
