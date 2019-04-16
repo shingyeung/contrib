@@ -63,14 +63,18 @@ TODO
 * Download ssh program:  putty https://putty.org/
 
 * Log in to your rpi3 with ssh
+
 ```ssh ubuntu@1.2.3.4```
+
 ** default password is 'ubuntu'
 // forces you to change the password, do so
 
 * Set up root access (you need root to install all the software and dependencies)
 
 Note:  If you don't like enabling the root account and knows enough about sudo, you can skip this step.
+
 ```sudo passwd```
+
 Supply your ubuntu password to run the sudo command
 Then, supply a password for root.  It will ask for it a 2nd time.
 
