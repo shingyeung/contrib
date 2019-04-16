@@ -6,3 +6,5 @@
 ## Domain name, and Port Forwarding
 ## Install Solid
 ## Configure and Run Solid
+## Backing up your data
+## DR and HA
