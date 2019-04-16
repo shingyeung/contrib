@@ -55,13 +55,14 @@ Download and install Win32DiskImager
 https://sourceforge.net/projects/win32diskimager/
 
 On Mac:
+
 TODO
 
 * Burning the OS, and powering up your rpi3
 
 [Add pics on how to do - like here ]
 
-* Insert into the rpi3 SD slot and plugin power
+* Insert into the rpi3 SD slot, connect the ethernet cable from your router port to the rpi3, and plug in power to the rpi3; watch the lights go on and blink
 
 * After a few mintues, from your desktop/laptop browser log into to your router admin screen and locate your rpi3's IP address, say 1.2.3.4 for remainder of this how-to
 
