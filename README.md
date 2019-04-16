@@ -1,4 +1,4 @@
-# WIP, Incompleted, DO NOT USE
+# WIP, Incomplete, DO NOT USE
 
 [Add Disclaimers, exclusion clauses and risk warnings]
 
