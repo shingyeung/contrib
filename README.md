@@ -32,10 +32,13 @@ You will also need the ability to burn an OS image onto a microSD card from a la
 ## Install Linux
 
 Download the OS for the rpi3:
-ubuntu-16.04-preinstalled-server-armhf+raspi3.img
+
+```ubuntu-16.04-preinstalled-server-armhf+raspi3.img```
 
 Select "Ubuntu Classic Server 16.04 Raspberry Pi 3 (216MB)" from https://ubuntu-pi-flavour-maker.org/download/  
 * Direct link from www.finnie.org/software/raspberrypi/ubuntu-rpi3/ubuntu-16.04-preinstalled-server-armhf+raspi3.img.xz
+
+Note: If you prefer you may want to use ubuntu-18 img instead and will likely work also but these steps have not been tested with ubuntu 18.
 
 Use 7zip to extract the .img
 
