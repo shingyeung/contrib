@@ -66,7 +66,7 @@ TODO
 
 ```ssh ubuntu@1.2.3.4```
 
-** default password is 'ubuntu'
+The default password is '```ubuntu```'
 // forces you to change the password, do so
 
 * Set up root access (you need root to install all the software and dependencies)
