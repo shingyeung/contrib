@@ -173,14 +173,17 @@ You will be supplying privkey.pem and fullchain.pem at Solid initialization, bel
 As root:
 
 This takes a while...
+
 ```npm install -g solid-server@4.4.2```
 
 Note: Latest version NSS 5.0.1 (4/2019) appears to peg CPU on a rpi3 after a trustedApp is added; 4.4.2 does not
 
 Check which version is installed:
+
 ```npm list -g solid-version```
 
 If you need to start over, uninstall with:
+
 ```npm uninstall -g solid-server```
 
 ## Configure and Run Solid
