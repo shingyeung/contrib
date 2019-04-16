@@ -11,6 +11,7 @@ Assumptions/Dependencies:
 * You are somewhat familiar with getting around in Linux command line
 * You known enough to edit a text file with vi in Linux
 * You are okay with setting up port forwarding on your home router, and know/accept the potential security risks or know how to protect your router from attacks. **If not, do not proceed.**
+* Also, some ISP may not allow server hosting from a residential subscription so please consult your ISP before proceeding.
 
 You want to host your own POD because
 * You want to own your data physically
