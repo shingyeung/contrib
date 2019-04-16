@@ -33,7 +33,7 @@ You will also need the ability to burn an OS image onto a MicroSD card from a la
 
 ## Install Linux
 
-Download the OS for the rpi3:
+**Download the OS for the rpi3**
 
 ```ubuntu-16.04-preinstalled-server-armhf+raspi3.img```
 
@@ -44,7 +44,7 @@ Note: If you prefer you may want to use Ubuntu-18 img instead and will likely wo
 
 Use [7zip](https://sourceforge.net/projects/sevenzip/) to extract the .img
 
-*Burning the MicroSD with OS image, and powering up your rpi3*
+**Burning the MicroSD with OS image, and powering up your rpi3**
 
 You now need to burn this .img onto the SD card from your laptop or desktop.
 
