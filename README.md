@@ -2,7 +2,7 @@
 
 The steps below have been tested to work on the listed hardware and software combination.
 
-For setup using Docker on a Raspberry Pi, see TBD.
+_For setup using Docker on a Raspberry Pi, see TBD._
 
 Assumptions/Dependencies:
 * Hosting one POD (single user)
@@ -29,7 +29,7 @@ They can be purchased at the usual online stores or from craigslist.
 
 You will also need the ability to burn an OS image onto a MicroSD card from a laptop or desktop computer with a card reader/writer.
 
-[Add picture of setup]
+_[Add picture of setup]_
 
 ## Install Linux
 
@@ -48,17 +48,17 @@ Use [7zip](https://sourceforge.net/projects/sevenzip/) to extract the .img
 
 You now need to burn this .img onto the SD card from your laptop or desktop.
 
-_On Windows:_ Download and install Win32DiskImager
-https://sourceforge.net/projects/win32diskimager/
-[Add pics]
+_On Windows:_ Download and install [Win32DiskImager](https://sourceforge.net/projects/win32diskimager/)
 
-_On Mac:_ [TODO]
+_[Add pics]_
+
+_On Mac:_ _[TODO]_
 
 1. After the OS image is burned onto the MicroSD, remove it from the card reader/writer and insert into the rpi3's microSD slot (MicroSD card's copper fingers/pads facing the rpi3's circuit board), connect the Ethernet cable from a free port on your router to the rpi3's Ethernet jack, and plug in power to the rpi3; watch the lights go on and blink while it boots the OS.
 
 2. After a minute or two, the OS boot will have completed. From a browser log into to your router admin screen and locate your rpi3's IP address, say 1.2.3.4 for remainder of this how-to.
 
-[add screenshot for Asus router admin screen]
+_[add screenshot for Asus router admin screen]_
 
 ## Log into your rpi3
 
@@ -79,7 +79,7 @@ sudo passwd
 ```
 Supply a password for root.  It will ask for it a 2nd time to confirm.
 
-[Add screenshot]
+_[Add screenshot]_
 
 ## Prepare tooling to install Solid
 
@@ -88,7 +88,10 @@ Switch over to root account:
 su -
 ```
 
-And run all of these commands one at a time.  Look for errors and do not proceed to next step if any [TODO: add common errors and fixes]
+And run all of these commands one at a time.  Look for errors and do not proceed to next step if any.
+
+_[TODO: add common errors and fixes]_
+
 Some of these take a while to complete so be patient...
 ```
 apt-get update -y && apt-get upgrade -y
@@ -119,7 +122,7 @@ This is the recommended option for on-going long term hosting of your own POD.  
 Free alternatives to getting a domain name include:
 * Configuring your router to enable a Dynamic DNS name:  Most mainstream router manufacturers, e.g. Asus, provides a single name to be registered through the manufacturer's DNS server, e.g. yourdomainname.asuscomm.com (for Asus).  Check your router manual on how to configure this.
 
-* Via Freenom [instructions here](https://www.bourgeoa.ga/solid-wiki/index.php?title=Solid_server_with_docker_on_a_Synology_Nas#get_a_domain_name_with_freenom)
+* Try Freenom [instructions here](https://www.bourgeoa.ga/solid-wiki/index.php?title=Solid_server_with_docker_on_a_Synology_Nas#get_a_domain_name_with_freenom)
 
 **Port Forwarding**
 
