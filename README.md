@@ -97,8 +97,8 @@ Switch over to root acount:
 
 And run all of these commands one at a time.  Look for errors and do not proceed to next step if any [TODO: add common errors and fixes]
 
-```
 This one take a while...
+```
 apt-get update -y && apt-get upgrade -y
 
 apt-get install -y software-properties-common
@@ -109,8 +109,9 @@ apt-get update -y
 
 apt-get install -y certbot
 
-This one takes a while too ...
-apt-get install -y npm
+```
+This one takes a while too...
+```apt-get install -y npm
 ```
 
 ## Domain name or DDNS, and Port Forwarding
@@ -126,36 +127,12 @@ Note: You need to configure your home router to forward port 80 while you run th
 [TODO - also refer to NSS installation page at inrupt]
 
 ```
-root@ubuntu:~# certbot certonly --authenticator standalone -d yourdomain.com
-Saving debug log to /var/log/letsencrypt/letsencrypt.log
-Plugins selected: Authenticator standalone, Installer None
-Enter email address (used for urgent renewal and security notices) (Enter 'c' to
-cancel): yourname@youremail.com
-Starting new HTTPS connection (1): acme-v02.api.letsencrypt.org
+certbot certonly --authenticator standalone -d yourdomain.com
+```
+Answer the questions and provide your email.
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-Please read the Terms of Service at
-https://letsencrypt.org/documents/LE-SA-v1.2-November-15-2017.pdf. You must
-agree in order to register with the ACME server at
-https://acme-v02.api.letsencrypt.org/directory
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-(A)gree/(C)ancel: A
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-Would you be willing to share your email address with the Electronic Frontier
-Foundation, a founding partner of the Let's Encrypt project and the non-profit
-organization that develops Certbot? We'd like to send you email about our work
-encrypting the web, EFF news, campaigns, and ways to support digital freedom.
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-(Y)es/(N)o: N
-Obtaining a new certificate
-Performing the following challenges:
-http-01 challenge for yourdomain.com
-Waiting for verification...
-Cleaning up challenges
-Resetting dropped connection: acme-v02.api.letsencrypt.org
-
-IMPORTANT NOTES:
+If all goes well, you will see:
+```
  - Congratulations! Your certificate and chain have been saved at:
    /etc/letsencrypt/live/yourdomain.com/fullchain.pem
    Your key file has been saved at:
@@ -170,7 +147,7 @@ IMPORTANT NOTES:
    Donating to EFF:                    https://eff.org/donate-le
 ```
 
-You should see your certificate:  **privkey.pem, cert.pem, fullchain.pem, chain.pem**
+Your certificate files are found here:
 ```
 root@ubuntu:~# find /etc/letsencrypt/live
 /etc/letsencrypt/live
@@ -184,12 +161,15 @@ root@ubuntu:~# find /etc/letsencrypt/live
 
 ```
 
+You will be supplying privkey.pem and fullchain.pem at Solid initialization, below.
+
 **Now, don't forget to goto your router and remove the port 80 forward configuration.**
 
 ## Install Solid with npm
 
 As root:
 
+This takes a while...
 ```npm install -g solid-server@4.4.2```
 
 Note: Latest version NSS 5.0.1 (4/2019) appears to peg CPU on a rpi3 after a trustedApp is added; 4.4.2 does not
