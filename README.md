@@ -162,6 +162,8 @@ Now, initialize solid with this one-time (per installation) command:
 
 ```solid init```
 
+[refer to remainder from NSS installation steps https://solid.inrupt.com/docs/installing-running-nss]
+
 Run Solid:
 
 ```cd /var/www/yourdomain.com```
@@ -173,8 +175,6 @@ Run Solid:
 [Add screenshot of successful startup]
 
 If you don't see any errors, your POD is ready to be accessed from a browser.
-
-[refer to remainder from NSS installation steps https://solid.inrupt.com/docs/installing-running-nss]
 
 ## Log on to your POD
 
