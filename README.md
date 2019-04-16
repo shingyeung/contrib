@@ -84,14 +84,23 @@ Then, supply a password for root.  It will ask for it a 2nd time.
 ## Prepare tooling to install Solid
 
 Switch over to root acount:
+
 ```su -```
+
 ```apt-get update```
+
 ```apt-get upgrade```
+
 ```apt-get update -y && apt-get upgrade -y```
+
 ```apt-get install software-properties-common```
+
 ```add-apt-repository ppa:certbot/certbot```
+
 ```apt-get update```
+
 ```apt-get install certbot```
+
 ```apt-get install npm```
 
 ## Domain name or DDNS, and Port Forwarding
@@ -116,18 +125,26 @@ If you need to start over, uninstall with:
 ## Configure and Run Solid
 
 As root:
+
 ```cd /var/www```
+
 ```mkdir -p yourdomain.com/data```
+
 ```mkdir -p yourdomain.com/config```
+
 ```mkdir -p yourdomain.com/.db```
+
 ```cd /var/www/yourdomain.com```
+
 ```solid init```
+
 [refer to remainder from NSS installation steps https://solid.inrupt.com/docs/installing-running-nss]
 
 ## Log on to your POD
 
 From a browser load
-https://yourdomain.com
+
+```https://yourdomain.com```
 
 * Click 'Register' and add your single user
 * Now, log in and select from the choices listed, click "yourdomain.com"
