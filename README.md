@@ -12,7 +12,7 @@ Assumptions/Dependencies:
 * You already have a domain name, or your router brand support one via DDNS, e.g. Asus
 * You are somewhat familiar with getting around in Linux command line
 * You known enough to edit a text file with vi in Linux
-* You are okay with setting up port forwarding on your home router, and know/accept the potential security risks or know how to protect your router from attacks. If not, do not proceed.
+* You are okay with setting up port forwarding on your home router, and know/accept the potential security risks or know how to protect your router from attacks. **If not, do not proceed.**
 
 ## Get the hardware
 
@@ -129,7 +129,7 @@ https://yourdomain.com
 
 [add screenshot]
 
-## Strategies for backing up your data
+## Backing up your data
 
 [TODO]
 
