@@ -109,6 +109,10 @@ Switch over to root acount:
 
 Disclaimer:  Security risks and considerations for opening up your home network to the internet at port 443.  Do so only if you know of the potential risks or have experience with protecting a web server, which is what NSS is.
 
+## Get your certificate from Letsencrypt
+
+[TODO - also refer to NSS installation page at inrupt]
+
 ## Install Solid with npm
 
 As root:
@@ -124,7 +128,7 @@ If you need to start over, uninstall with:
 
 ## Configure and Run Solid
 
-As root:
+As root, run all commands below
 
 ```cd /var/www```
 
@@ -136,13 +140,29 @@ As root:
 
 ```cd /var/www/yourdomain.com```
 
+[Add screenshot of dir structure resulted]
+
+Now, initialize solid with this one-time (per installation) command:
+
 ```solid init```
+
+Run Solid:
+
+```cd /var/www/yourdomain.com```
+
+```nohup solid start```
+
+```tail -f nohup.out```
+
+[Add screenshot of successful startup]
+
+If you don't see any errors, your POD is ready to be accessed from a browser.
 
 [refer to remainder from NSS installation steps https://solid.inrupt.com/docs/installing-running-nss]
 
 ## Log on to your POD
 
-From a browser load
+From a browser load:
 
 ```https://yourdomain.com```
 
