@@ -97,8 +97,6 @@ Switch over to root acount:
 
 And run all of these commands one at a time.  Look for errors and do not proceed to next step if any [TODO: add common errors and fixes]
 
-This one take a while...
-
 ```
 apt-get update -y && apt-get upgrade -y
 
@@ -115,11 +113,8 @@ apt-get update -y
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 
 apt-get install -y nodejs
-```
 
-This one takes a while too...
-
-```apt-get install -y npm
+apt-get install -y npm
 ```
 
 ## Domain name or DDNS, and Port Forwarding
