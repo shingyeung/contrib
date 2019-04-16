@@ -18,6 +18,8 @@ Assumptions/Dependencies:
 * You known enough to edit a text file with vi in Linux
 * You are okay with setting up port forwarding on your home router, and know/accept the potential security risks or know how to protect your router from attacks. **If not, do not proceed.**
 
+[Add why one would want to self-host a POD for self/family/friends]
+
 ## Get the hardware
 
 * Raspberry Pi3 Model B ("rpi3")
