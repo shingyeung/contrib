@@ -113,9 +113,11 @@ Note: You need to configure your home router to forward port 80 while you run th
 
 [TODO - also refer to NSS installation page at inrupt]
 
-```ls /etc/letsencrypt/live/yourdomain.com````
+```ls /etc/letsencrypt/live/yourdomain.com```
 
-You should see your certificate
+You should see your certificate:  **privkey.pem, cert.pem, fullchain.pem, chain.pem**
+
+Now, goto your router and remove the port 80 forward configuration.
 
 ## Install Solid with npm
 
