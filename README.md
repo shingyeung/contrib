@@ -244,7 +244,7 @@ Now, run Solid:
 
 ```cd /var/www/yourdomain.com
 
-nohup solid start
+nohup solid start &
 ```
 
 If you want to see its logs:
@@ -253,7 +253,7 @@ If you want to see its logs:
 tail -f nohup.out
 ```
 
-(ctrl-C to exit)
+(Ctrl-C to exit)
 
 If you don't see any errors, your POD is ready to be accessed from a browser.
 
