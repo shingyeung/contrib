@@ -85,9 +85,7 @@ Note:  If you don't like enabling the root account and knows enough about sudo, 
 
 ```sudo passwd```
 
-Supply your ubuntu password to run the sudo command.
-
-Then, supply a password for root.  It will ask for it a 2nd time.
+Supply a password for root.  It will ask for it a 2nd time to confirm.
 
 [Add screenshot]
 
