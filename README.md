@@ -114,6 +114,16 @@ apt-get install -y npm
 
 ## Domain name or DDNS, and Port Forwarding
 
+**Getting your own domain name**
+This is the recommended option for on-going long term hosting of your own POD.  While there is recurring annual cost, it will give you peace of mind and constant domain name for your commuications to the family/friends/world going forward.
+
+Alternatives to getting a domain name include:
+* Configuring your router to enable a Dynamic DNS name:  Most mainstream router manufacturers, e.g. Asus, provides a single name to be registered through the manufacturer's DNS server, e.g. yourdomainname.asuscomm.com (for Asus).  Check your router manual on how to configure this.
+
+* Via Freenom [instructions here] (https://www.bourgeoa.ga/solid-wiki/index.php?title=Solid_server_with_docker_on_a_Synology_Nas#get_a_domain_name_with_freenom)
+
+**Port Forwarding**
+
 Disclaimer:  Security risks and considerations for opening up your home network to the internet at port 443.  Do so only if you know of the potential risks or have experience with protecting your rpi3 NSS server.
 
 
