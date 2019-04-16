@@ -180,7 +180,11 @@ Note: Latest version NSS 5.0.1 (4/2019) appears to peg CPU on a rpi3 after a tru
 
 Check which version is installed:
 
-```npm list -g solid-version```
+```
+root@ubuntu:~# npm list -g solid-server
+/usr/lib
+└── solid-server@4.4.2
+```
 
 If you need to start over, uninstall with:
 
