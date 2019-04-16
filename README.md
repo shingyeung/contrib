@@ -176,7 +176,7 @@ This takes a while...
 
 ```npm install -g solid-server@4.4.2```
 
-Note: Latest version NSS 5.0.1 (4/2019) appears to peg CPU on a rpi3 after a trustedApp is added; 4.4.2 does not
+**Note: Latest version NSS 5.0.1 (4/2019) appears to peg CPU on a rpi3 after a trustedApp is added; 4.4.2 does not so recommend this version for rpi3 use.  Same is also observed on a full Unbuntu 16.0.4 LTS server on a VM but is not as exaggerated due to higher CPU and memeory specs there.**
 
 Check which version is installed:
 
@@ -251,7 +251,9 @@ If you want to see its logs:
 
 ```
 tail -f nohup.out
-```  (ctrl-C to exit)
+```
+
+(ctrl-C to exit)
 
 If you don't see any errors, your POD is ready to be accessed from a browser.
 
@@ -259,7 +261,8 @@ If you don't see any errors, your POD is ready to be accessed from a browser.
 
 From a browser load:
 
-```https://yourdomain.com```
+```https://yourdomain.com
+```
 
 * Click 'Register' and add your single user
 * Now, log in by selecting from the choices listed: "yourdomain.com" as the authorization provider
