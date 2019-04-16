@@ -87,9 +87,7 @@ Switch over to root acount:
 
 ```su -```
 
-```apt-get update```
-
-```apt-get upgrade```
+And run all of these commands one at a time.  Look for errors and do not proceed to next step if any [TODO: add common errors and fixes]
 
 ```apt-get update -y && apt-get upgrade -y```
 
@@ -111,7 +109,13 @@ Disclaimer:  Security risks and considerations for opening up your home network 
 
 ## Get your certificate from Letsencrypt
 
+Note: You need to configure your home router to forward port 80 while you run the command below to obtain your certificate.  Reason is certbot talks to letsencrypt and contacts back to yourdomain.com:80 for a response before the process can complete successfully.
+
 [TODO - also refer to NSS installation page at inrupt]
+
+```ls /etc/letsencrypt/live/yourdomain.com````
+
+You should see your certificate
 
 ## Install Solid with npm
 
