@@ -1,9 +1,3 @@
-# WIP, Incomplete, DO NOT USE
-
-[Add Disclaimers, exclusion clauses and risk warnings]
-
-[Add copyright]
-
 # Self hosting a Solid POD on a Raspberry Pi 3 using node-solid-server (NSS)
 
 The steps below have been tested to work on the stated hardware and software combination.
@@ -18,7 +12,9 @@ Assumptions/Dependencies:
 * You known enough to edit a text file with vi in Linux
 * You are okay with setting up port forwarding on your home router, and know/accept the potential security risks or know how to protect your router from attacks. **If not, do not proceed.**
 
-[Add why one would want to self-host a POD for self/family/friends]
+You want to host your own POD because
+* You want to own your data physically
+* You want an ability to host a POD for your friends and family (this requires wildcard certificated setup, see TBD) for same reason.
 
 ## Get the hardware
 
@@ -82,9 +78,9 @@ The default password is '```ubuntu```'
 * Set up root access (you need root to install all the software and dependencies)
 
 Note:  If you don't like enabling the root account and knows enough about sudo, you can skip this step.
-
-```sudo passwd```
-
+```
+sudo passwd
+```
 Supply a password for root.  It will ask for it a 2nd time to confirm.
 
 [Add screenshot]
@@ -93,7 +89,8 @@ Supply a password for root.  It will ask for it a 2nd time to confirm.
 
 Switch over to root account:
 
-```su -
+```
+su -
 ```
 
 And run all of these commands one at a time.  Look for errors and do not proceed to next step if any [TODO: add common errors and fixes]
@@ -120,16 +117,16 @@ apt-get install -y npm
 
 ## Domain name or DDNS, and Port Forwarding
 
-[TODO]
-
 Disclaimer:  Security risks and considerations for opening up your home network to the internet at port 443.  Do so only if you know of the potential risks or have experience with protecting your rpi3 NSS server.
+
 
 ## Get your certificate from Letsencrypt
 
 Note: You need to configure your home router to forward port 80 while you run the command below to obtain your certificate.  Reason is certbot talks to letsencrypt and contacts back to yourdomain.com:80 for a response before the process can complete successfully.
 
-[TODO - also refer to NSS installation page at inrupt]
+[Refer to NSS installation](https://solid.inrupt.com/docs/installing-running-nss)
 
+Here is a highlight:
 ```
 certbot certonly --authenticator standalone -d yourdomain.com
 ```
@@ -164,7 +161,6 @@ root@ubuntu:~# find /etc/letsencrypt/live
 /etc/letsencrypt/live/yourdomain.com/fullchain.pem
 
 ```
-
 You will be supplying privkey.pem and fullchain.pem at Solid initialization, below.
 
 **Now, don't forget to goto your router and remove the port 80 forward configuration.**
@@ -173,14 +169,13 @@ You will be supplying privkey.pem and fullchain.pem at Solid initialization, bel
 
 As root:
 
+```npm install -g solid-server@4.4.2
+```
 This takes a while...
-
-```npm install -g solid-server@4.4.2```
 
 **Note: Latest version NSS 5.0.1 (4/2019) appears to peg CPU on an rpi3 after a trustedApp is added; 4.4.2 does not.  Similar delay/sluggishness is also observed on a NSS5.0.1/Unbuntu 16.0.4 LTS server on a VM. It is not as exaggerated here probably due to higher CPU and memory specs.**
 
 Check which version is installed:
-
 ```
 root@ubuntu:~# npm list -g solid-server
 /usr/lib
@@ -188,7 +183,6 @@ root@ubuntu:~# npm list -g solid-server
 ```
 
 If you need to start over, uninstall with:
-
 ```npm uninstall -g solid-server```
 
 ## Configure and Run Solid
@@ -196,7 +190,6 @@ If you need to start over, uninstall with:
 As root, run all commands below
 
 Create directory structure in prep for Solid init:
-
 ```
 mkdir -p /var/www/yourdomain.com
 
