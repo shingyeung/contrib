@@ -46,11 +46,10 @@ Use [7zip](https://sourceforge.net/projects/sevenzip/) to extract the .img
 
 You now need to burn this .img onto the SD card from your laptop or desktop:
 
-On Windows:
-Download and install Win32DiskImager
+_On Windows:_ Download and install Win32DiskImager
 https://sourceforge.net/projects/win32diskimager/
 
-On Mac: [TODO]
+_On Mac:_ [TODO]
 
 1. Burning the MicroSD with OS image, and powering up your rpi3
 
