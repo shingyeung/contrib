@@ -131,6 +131,7 @@ Now, goto your router and remove the port 80 forward configuration.
 As root:
 
 ```npm install -g solid-server@4.4.2```
+
 Note: Latest version NSS 5.0.1 (4/2019) appears to peg CPU on a rpi3 after a trustedApp is added; 4.4.2 does not
 
 Check which version is installed:
