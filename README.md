@@ -31,7 +31,7 @@ Assumptions/Dependencies:
 
 They can be purchased at the usual online stores or from craigslist.
 
-You will also need the ability to burn an OS image onto a microSD card from a laptop or desktop computer with a card reader/writer.
+You will also need the ability to burn an OS image onto a MicroSD card from a laptop or desktop computer with a card reader/writer.
 
 [Add picture of setup]
 
@@ -44,7 +44,7 @@ Download the OS for the rpi3:
 Select "Ubuntu Classic Server 16.04 Raspberry Pi 3 (216MB)" from https://ubuntu-pi-flavour-maker.org/download/  
 * Direct link from www.finnie.org/software/raspberrypi/ubuntu-rpi3/ubuntu-16.04-preinstalled-server-armhf+raspi3.img.xz
 
-Note: If you prefer you may want to use ubuntu-18 img instead and will likely work also but these steps have not been tested with ubuntu 18.
+Note: If you prefer you may want to use Ubuntu-18 img instead and will likely work also but these steps have not been tested with ubuntu 18.
 
 Use [7zip](https://sourceforge.net/projects/sevenzip/) to extract the .img
 
@@ -62,9 +62,9 @@ TODO
 
 [Add pics on how to do - like here ]
 
-* Insert into the rpi3 SD slot, connect the ethernet cable from your router port to the rpi3, and plug in power to the rpi3; watch the lights go on and blink
+* Insert into the rpi3 SD slot, connect the Ethernet cable from your router port to the rpi3, and plug in power to the rpi3; watch the lights go on and blink
 
-* After a few mintues, from your desktop/laptop browser log into to your router admin screen and locate your rpi3's IP address, say 1.2.3.4 for remainder of this how-to
+* After a few minutes, from your desktop/laptop browser log into to your router admin screen and locate your rpi3's IP address, say 1.2.3.4 for remainder of this how-to
 
 [add screenshot for Asus router admin screen]
 
@@ -91,9 +91,10 @@ Supply a password for root.  It will ask for it a 2nd time to confirm.
 
 ## Prepare tooling to install Solid
 
-Switch over to root acount:
+Switch over to root account:
 
-```su -```
+```su -
+```
 
 And run all of these commands one at a time.  Look for errors and do not proceed to next step if any [TODO: add common errors and fixes]
 
@@ -176,7 +177,7 @@ This takes a while...
 
 ```npm install -g solid-server@4.4.2```
 
-**Note: Latest version NSS 5.0.1 (4/2019) appears to peg CPU on a rpi3 after a trustedApp is added; 4.4.2 does not so recommend this version for rpi3 use.  Same is also observed on a full Unbuntu 16.0.4 LTS server on a VM but is not as exaggerated due to higher CPU and memeory specs there.**
+**Note: Latest version NSS 5.0.1 (4/2019) appears to peg CPU on an rpi3 after a trustedApp is added; 4.4.2 does not.  Similar delay/sluggishness is also observed on a NSS5.0.1/Unbuntu 16.0.4 LTS server on a VM. It is not as exaggerated here probably due to higher CPU and memory specs.**
 
 Check which version is installed:
 
