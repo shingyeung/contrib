@@ -48,27 +48,31 @@ https://sourceforge.net/projects/win32diskimager/
 On Mac:
 TODO
 
-1. Burning the OS, and powering up your rpi3
+* Burning the OS, and powering up your rpi3
 
 [Add pics on how to do - like here ]
 
-2. Insert into the rpi3 SD slot and plugin power
+* Insert into the rpi3 SD slot and plugin power
 
-3. After a few mintues, from your desktop/laptop browser log into to your router admin screen and locate your rpi3's IP address, say 1.2.3.4 for remainder of this how-to
+* After a few mintues, from your desktop/laptop browser log into to your router admin screen and locate your rpi3's IP address, say 1.2.3.4 for remainder of this how-to
    [add screenshot for Asus router admin screen]
 
 ## Log into your rpi3
 
 * Download putty for ssh
 
-* ssh ubuntu@1.2.3.4
-** password is 'ubuntu'
+* Log in to your rpi3 with ssh
+```ssh ubuntu@1.2.3.4```
+** default password is 'ubuntu'
 // forces you to change the password, do so
 
-* Set up root access
+* Set up root access (you need root to install all the software and dependencies)
+
+Note:  If you don't like enabling the root account and knows enough about sudo, you can skip this step.
 ```sudo passwd```
 Supply your ubuntu password to run the sudo command
 Then, supply a password for root.  It will ask for it a 2nd time.
+
 [Add screenshot]
 
 ## Prepare tooling to install Solid
@@ -90,12 +94,12 @@ Switch over to root acount:
 
 Disclaimer:  Security risks and considerations for opening up your home network to the internet at port 443.  Do so only if you know of the potential risks or have experience with protecting a web server, which is what NSS is.
 
-## Install Solid
+## Install Solid with npm
 
 As root:
-* Latest version NSS 5.0.1 (4/2019) appears to peg CPU on a rpi3 after a trustedApp is added; 4.4.2 does not
 
 ```npm install -g solid-server@4.4.2```
+Note: Latest version NSS 5.0.1 (4/2019) appears to peg CPU on a rpi3 after a trustedApp is added; 4.4.2 does not
 
 Check which version is installed:
 ```npm list -g solid-version```
