@@ -112,7 +112,7 @@ apt-get install -y npm
 
 ## Domain name or DDNS, and Port Forwarding
 
-_Getting your own domain name_
+**Getting your own domain name**
 
 This is the recommended option for on-going long term hosting of your own POD.  While there is recurring annual cost, it will give you peace of mind and constant a domain name for your communications to the family/friends/world going forward.
 
@@ -121,15 +121,15 @@ Free alternatives to getting a domain name include:
 
 * Via Freenom [instructions here](https://www.bourgeoa.ga/solid-wiki/index.php?title=Solid_server_with_docker_on_a_Synology_Nas#get_a_domain_name_with_freenom)
 
-_Port Forwarding_
+**Port Forwarding**
 
-**Important**:  Security risks and considerations for opening up your home network to the internet at port 443.  Do so only if you know of the potential risks or have experience with protecting your rpi3 NSS server.
+**Important**:  There are security risks and considerations for opening up your home network to the internet at port 443.  Do so only if you know of the potential risks and/or have experience with protecting your rpi3 NSS server.
 
-Different router brands all have different methods to configure port forwarding.  Please consult your router manual to configure forwarding incoming traffic from the Internet on port 443 to port 443 of your rpi3.
+Different router brands all have different methods to configure port forwarding.  Please consult your router manual to configure forwarding incoming Internet traffic on port 443 to port 443 of your rpi3.
 
 ## Get your certificate from Letsencrypt
 
-Note: You need to configure your home router to forward port 80 while you run the command below to obtain your certificate.  Reason is certbot talks to letsencrypt and contacts back to yourdomain.com:80 for a response before the process can complete successfully.
+Note: You need to configure your home router to forward port 80 while you run the command below to obtain your certificate.  Reason is certbot talks to letsencrypt and it contacts back to yourdomain.com:80 for a response before the process can complete successfully.
 
 [Refer to NSS installation](https://solid.inrupt.com/docs/installing-running-nss)
 
