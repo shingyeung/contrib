@@ -17,7 +17,7 @@ You want to host your own POD because
 * You want to own your data physically
 * (Not covered by this how-to) You want an ability to host a POD for your friends and family (this requires wildcard certificated setup, see TBD) for same reason.
 * You want to minimize electricty consumed by your POD server running 24/7.
-* You want no quota on the bandwidth and storage quotas enforced by online providers.
+* You want no quota on the bandwidth and storage which online POD providers enforce (for good reason).
 
 ## Get the hardware
 
