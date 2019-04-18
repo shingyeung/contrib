@@ -16,6 +16,8 @@ Assumptions/Dependencies:
 You want to host your own POD because
 * You want to own your data physically
 * (Not covered by this how-to) You want an ability to host a POD for your friends and family (this requires wildcard certificated setup, see TBD) for same reason.
+* You want to minimize electricty consumed by your POD server running 24/7.
+* You want no quota on the bandwidth and storage quotas enforced by online providers.
 
 ## Get the hardware
 
@@ -124,6 +126,14 @@ Free alternatives to getting a domain name include:
 * Configuring your router to enable a Dynamic DNS name:  Most mainstream router manufacturers, e.g. Asus, provides a single name to be registered through the manufacturer's DNS server, e.g. yourdomainname.asuscomm.com (for Asus).  Check your router manual on how to configure this.
 
 * Try Freenom [instructions here](https://www.bourgeoa.ga/solid-wiki/index.php?title=Solid_server_with_docker_on_a_Synology_Nas#get_a_domain_name_with_freenom)
+
+The remainder of this how-to uses
+
+Domain name:  yourdomain.com
+
+Your public IP address: 1.2.3.4
+
+And you have updated the A record at your DNS provider to point yourdomain.com to 1.2.3.4
 
 **Port Forwarding**
 
@@ -302,4 +312,4 @@ exit
 exit
 ```
 
-Alternative approaches for backing up your data that are not as high-touch as above after implementation are possible but too advanced for this how-to, e.g. mounting the /var/www/yourdomain.com/data directory to a redundant network drive, setting up dirsync, or a crontab that ftps a tar of the data directory elsewhere.
+Alternative approaches for backing up your data that are not as high-touch as above (after implementation) are possible but too advanced for this how-to, e.g. mounting the /var/www/yourdomain.com/data directory to a redundant network drive, setting up dirsync, or a crontab that ftps a tar of the data directory elsewhere.
