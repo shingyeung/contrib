@@ -58,7 +58,7 @@ _On Mac:_ _[TODO]_
 
 1. After the OS image is burned onto the MicroSD, remove it from the card reader/writer and insert into the rpi3's microSD slot (MicroSD card's copper fingers/pads facing the rpi3's circuit board), connect the Ethernet cable from a free port on your router to the rpi3's Ethernet jack, and plug in power to the rpi3; watch the lights go on and blink while it boots the OS.
 
-2. After a minute or two, the OS boot will have completed. From a browser log into to your router admin screen and locate your rpi3's IP address, say 1.2.3.4 for remainder of this how-to.
+2. After a minute or two, the OS boot will have completed. From a browser log into to your router admin screen and locate your rpi3's IP address on your home network, say 192.168.1.10 for remainder of this how-to.
 
 _[add screenshot for Asus router admin screen]_
 
@@ -68,7 +68,7 @@ _[add screenshot for Asus router admin screen]_
 
 * Log in to your rpi3 with putty, or from a command line with ssh program:
 
-```ssh ubuntu@1.2.3.4```
+```ssh ubuntu@192.168.1.10```
 
 The default password is '```ubuntu```'
 // forces you to change the password, do so
