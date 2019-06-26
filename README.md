@@ -1,4 +1,4 @@
-# Self-hosting a Solid POD on a Raspberry Pi 3 using node-solid-server (NSS)
+# Self-hosting a Solid POD on a Raspberry Pi 3 using node-solid-server (NSS 5.1.5)
 
 The steps below have been tested to work on the listed hardware and software combination.
 
@@ -185,16 +185,14 @@ You will be supplying privkey.pem and fullchain.pem at Solid initialization, bel
 
 As root:
 ```
-npm install -g solid-server@4.4.2
+npm install -g solid-server@5.1.5
 ```
-
-**Note: Latest version NSS 5.0.1 (4/2019) appears to peg CPU on an rpi3 after a trustedApp is added; 4.4.2 does not.  Similar delay/sluggishness is also observed on a NSS5.0.1/Unbuntu 16.0.4 LTS server on a VM. It is not as exaggerated there probably due to higher CPU and memory specs.**
 
 Check which version is installed:
 ```
 root@ubuntu:~# npm list -g solid-server
 /usr/lib
-└── solid-server@4.4.2
+└── solid-server@5.1.5
 ```
 If you need to start over, uninstall with:
 ```
@@ -230,7 +228,7 @@ Answer all the questions per [NSS installation steps](https://solid.inrupt.com/d
 Should look something like:
 
 ```
-root@ubuntu:/var/www/yourdomain.com# solid init
+root@nss515:/var/www/yourdomain.com# solid init
 ? Path to the folder you want to serve. Default is /var/www/yourdomain.com/data
 ? SSL port to run on. Default is 443
 ? Solid server uri (with protocol, hostname and port) https://yourdomain.com
@@ -243,9 +241,12 @@ root@ubuntu:/var/www/yourdomain.com# solid init
 ? Path to the SSL certificate key in PEM format /etc/letsencrypt/live/yourdomain.com/fullchain.pem
 ? Enable multi-user mode No
 ? Do you want to set up an email service? No
-? A name for your server (not required, but will be presented on your server's frontpage) yourdomain.com
-? A description of your server (not required)
+? A name for your server (not required, but will be presented on your server's frontpage) 
+? A description of your server (not required) 
 ? A logo that represents you, your brand, or your server (not required)
+? Do you want to enforce Terms & Conditions for your service? No
+? Do you want to disable password strength checking? No
+? The support email you provide for your users (not required)
 config created on /var/www/yourdomain.com/config.json
 ```
 
